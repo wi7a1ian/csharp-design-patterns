@@ -1,0 +1,10 @@
+﻿http://www.codeproject.com/Articles/1009532/Learn-Csharp-Design-patterns-step-by-step-with-a-p#TheSofSOLID(Singleresponsibilityprinciple)
+
+
+Single Responsibility principle ( SRP).
+Open close principle (OCP)
+Liskov Substitution Principle ( LSP )
+Interface segregation principle ( ISP)
+Dependency inversion principle. ( DI )
+
+Keep SOLID principles running at your back ground when you are doing architecting.
