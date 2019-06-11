@@ -2,6 +2,15 @@
 
 namespace FactoryMethod
 {
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            BaseUiFactory uiFactory = new Windows10UiFactory();
+            IWindow window = uiFactory.GetWindow(WindowStyle.Borderless);
+        }
+    }
+
     public enum WindowStyle
     {
         Normal,
@@ -67,15 +76,6 @@ namespace FactoryMethod
                     break;
             }
             return window;
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            BaseUiFactory uiFactory = new Windows10UiFactory();
-            IWindow window = uiFactory.GetWindow(WindowStyle.Borderless);
         }
     }
 }

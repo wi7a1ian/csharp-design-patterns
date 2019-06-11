@@ -2,6 +2,15 @@
 
 namespace AbstractFactory
 {
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var engine = new GameEngine(new imps.WpfGuiFactory());
+            //...
+        }
+    }
+
     public enum WindowStyle
     {
         Normal,
@@ -19,12 +28,12 @@ namespace AbstractFactory
     }
 
     public interface IGuiFactory
-    { 
+    {
         IGuiSplashscreen CreateSplashscreen();
         IGuiMainWindow CreateMainWindow(WindowStyle style);
 
     };
-    
+
     public class GameEngine
     {
         public GameEngine(IGuiFactory uiFactory)
@@ -34,15 +43,6 @@ namespace AbstractFactory
 
             IGuiMainWindow window = uiFactory.CreateMainWindow(WindowStyle.NoFrame);
             window.Show();
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            var engine = new GameEngine(new imps.WpfGuiFactory());
-            //...
         }
     }
 
