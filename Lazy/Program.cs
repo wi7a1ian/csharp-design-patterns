@@ -7,14 +7,16 @@ namespace LazyInitialization
         static void Main(string[] args)
         {
             var x = new SimpleLazy<SomeHeavyClass>();
+            var y = new SimpleLazy<SomeHeavyClass>(() => new SomeHeavyClass());
             
             //...
             // do something here
             //...
 
-            ISomeHeavyClass y = x.Value; // load when really needed
+            ISomeHeavyClass xi = x.Value; // load when really needed
+            ISomeHeavyClass yi = y.Value; // load when really needed
 
-            if(x == null || y == null)
+            if((xi == null || xi == null) || (yi == null || yi == null))
             {
                 throw new Exception();
             }
@@ -26,17 +28,31 @@ namespace LazyInitialization
         T Value { get; }
     }
 
-    public class SimpleLazy<T> : ILazy<T> where T : class, new()
+    public class SimpleLazy<T> 
+        : ILazy<T> where T : class, new()
     {
         private T instance = null;
+        private Func<T> factory = null;
 
-        public T Value 
-        { 
-            get 
-            { 
+        public SimpleLazy(Func<T> factory = null)
+        {
+            this.factory = factory;
+        }
+
+        public T Value
+        {
+            get
+            {
                 if (instance == null)
                 {
-                    instance = new T();
+                    if(factory != null)
+                    {
+                        instance = factory();
+                    }
+                    else
+                    {
+                        instance = new T();
+                    }
                 }
 
                 return instance;
