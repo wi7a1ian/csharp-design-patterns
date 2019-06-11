@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Builder\Builder.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLocator", "ServiceLocator\ServiceLocator.csproj", "{83E40056-6397-4E1B-B15F-D0C64395C1D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyInitialization", "Lazy\LazyInitialization.csproj", "{33669981-8F87-4B00-A136-0708F72FE924}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{83E40056-6397-4E1B-B15F-D0C64395C1D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83E40056-6397-4E1B-B15F-D0C64395C1D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83E40056-6397-4E1B-B15F-D0C64395C1D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33669981-8F87-4B00-A136-0708F72FE924}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33669981-8F87-4B00-A136-0708F72FE924}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33669981-8F87-4B00-A136-0708F72FE924}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33669981-8F87-4B00-A136-0708F72FE924}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
