@@ -27,10 +27,5 @@ namespace PrototypePattern
                 throw new Exception("Bill date  is not proper");
             }
         }
-
-        public ICustomer Clone()
-        {
-            return (ICustomer)this.MemberwiseClone();
-        }
     }
 }

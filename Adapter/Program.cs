@@ -15,7 +15,7 @@ namespace Adapter
 
         static void Process(ISomeInternalInterface recProcessor)
         {
-            // nop
+            recProcessor.ProcessRectangle(0, 0, 100, 100);
         }
     }
 

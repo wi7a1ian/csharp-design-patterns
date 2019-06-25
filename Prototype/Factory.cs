@@ -19,7 +19,7 @@ namespace PrototypePattern
 
         public static ICustomer Create(int CustomerType)
         {
-            return (ICustomer)customers[CustomerType].Clone();
+            return customers[CustomerType].Clone() as ICustomer;
         }
     }
 }
