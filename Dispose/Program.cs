@@ -50,12 +50,12 @@ namespace Dispose
                 {
                     //
                     // Free any other managed objects here. 
-                    // TODO
+                    // ...
                 }
 
                 // 
                 // Free any unmanaged objects here. 
-                // TODO
+                // ...
 
                 disposed = true;
             }
