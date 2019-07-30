@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Sing
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multiton", "Multiton\Multiton.csproj", "{21F952EC-D0B5-40D2-BC10-358515BFAD28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{4F251763-7032-4DE6-82CE-263A0D385757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{4F251763-7032-4DE6-82CE-263A0D385757}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{2FBD5358-24C1-44F7-9378-13CBB88AAC15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Decorator\Decorator.csproj", "{2FBD5358-24C1-44F7-9378-13CBB88AAC15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{A39F34CC-914F-487B-BF3F-C4B904C42E3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{2FBD5358-24C1-44F7-9378-13CBB88AAC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FBD5358-24C1-44F7-9378-13CBB88AAC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FBD5358-24C1-44F7-9378-13CBB88AAC15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39F34CC-914F-487B-BF3F-C4B904C42E3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39F34CC-914F-487B-BF3F-C4B904C42E3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39F34CC-914F-487B-BF3F-C4B904C42E3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39F34CC-914F-487B-BF3F-C4B904C42E3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
