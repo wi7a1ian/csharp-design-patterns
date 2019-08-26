@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Mediator
 {
@@ -6,16 +8,19 @@ namespace Mediator
     {
         static void Main(string[] args)
         {
-            var dialogMediator = new DialogMediator();
+            var dialogMediator = new AsyncDialogMediator();
             var presenter = new DialogPresenter(dialogMediator);
             var homeViewModel = new HomeViewModel(dialogMediator);
             var dirTreeViewModel = new DirTreeViewModel(dialogMediator);
             
-            for(int i = 0; i < 10; ++i)
-            {
-                homeViewModel.Update();
-                dirTreeViewModel.Update();
-            }
+            Task.Run( async () =>
+            { 
+                for(int i = 0; i < 10; ++i)
+                {
+                    await homeViewModel.Update();
+                    await dirTreeViewModel.Update();
+                }
+            }).Wait();
         }
     }
 
@@ -27,10 +32,10 @@ namespace Mediator
     public interface IDialogMediator 
     {
         void RegisterPresenter(IDialogPresenter presenter);
-        bool ShowDialog(string text);
+        Task<bool> ShowDialog(string text);
     }
 
-    public class DialogMediator : IDialogMediator
+    public class AsyncDialogMediator : IDialogMediator
     {
         private IDialogPresenter presenter;
 
@@ -39,11 +44,11 @@ namespace Mediator
             this.presenter = presenter;
         }
 
-        public bool ShowDialog(string text)
+        public async Task<bool> ShowDialog(string text)
         {
             if(presenter != null)
             {
-                return presenter.ShowDialog("Dang!", text);
+                return await Task.Run( () => presenter.ShowDialog("Dang!", text));
             }
             else
             {
@@ -54,49 +59,52 @@ namespace Mediator
 
     public class DialogPresenter : IDialogPresenter
     {
-        public DialogPresenter(DialogMediator dialogMediator)
+        public DialogPresenter(AsyncDialogMediator dialogMediator)
         {
             dialogMediator.RegisterPresenter(this);
         }
 
         public bool ShowDialog(string title, string text)
         {
-            Console.WriteLine($"{title} {text}");
+            Console.WriteLine($"[{title} {text}]");
             Console.ReadKey();
             return true;
         }
     }
 
-
     public class HomeViewModel
     {
-        private DialogMediator dialogMediator;
+        private AsyncDialogMediator dialogMediator;
 
-        public HomeViewModel(DialogMediator dialogMediator)
+        public HomeViewModel(AsyncDialogMediator dialogMediator)
         {
             this.dialogMediator = dialogMediator;
         }
 
-        public void Update()
+        public async Task Update()
         {
             var errorMessage = $"Something failed in {nameof(HomeViewModel)}";
-            dialogMediator.ShowDialog(errorMessage);
+            await dialogMediator.ShowDialog(errorMessage);
         }
     }
 
     public class DirTreeViewModel
     {
-        private DialogMediator dialogMediator;
+        private AsyncDialogMediator dialogMediator;
 
-        public DirTreeViewModel(DialogMediator dialogMediator)
+        public DirTreeViewModel(AsyncDialogMediator dialogMediator)
         {
             this.dialogMediator = dialogMediator;
         }
 
-        public void Update()
+        public async Task Update()
         {
             var errorMessage = $"Something failed in {nameof(DirTreeViewModel)}";
-            dialogMediator.ShowDialog(errorMessage);
+            var dialogTask = dialogMediator.ShowDialog(errorMessage);
+
+            Console.WriteLine("Yo");
+
+            await dialogTask;
         }
     }
 }
