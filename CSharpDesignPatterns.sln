@@ -53,21 +53,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQS", "CQS\CQS.csproj", "{1
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Command", "Command\Command.csproj", "{C46FC004-AA57-427C-83F3-87BFA4EDA938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Memento", "Memento\Memento.csproj", "{1C5444B7-E0C7-42A7-8DE9-0495A9023AF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.csproj", "{1C5444B7-E0C7-42A7-8DE9-0495A9023AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Mediator\Mediator.csproj", "{34197C36-C045-4E5E-9DB2-793930449618}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mediator", "Mediator\Mediator.csproj", "{34197C36-C045-4E5E-9DB2-793930449618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventAggregator", "EventAggregator\EventAggregator.csproj", "{B1EFC3BA-647F-46EC-BBDC-8F47F1048344}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventAggregator", "EventAggregator\EventAggregator.csproj", "{B1EFC3BA-647F-46EC-BBDC-8F47F1048344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{7109ABEE-10DA-4E3F-B373-FD5B486098D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Observer", "Observer\Observer.csproj", "{7109ABEE-10DA-4E3F-B373-FD5B486098D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{90362C1C-E570-4894-8580-EA16C9965EF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterator.csproj", "{90362C1C-E570-4894-8580-EA16C9965EF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{4FC4B529-6DD0-410C-A448-BCE20745C5FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{4FC4B529-6DD0-410C-A448-BCE20745C5FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Composite.csproj", "{17054493-DDF8-45FA-B434-6E1EE47C36BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Composite.csproj", "{17054493-DDF8-45FA-B434-6E1EE47C36BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{9A0604FA-99AD-4EA6-9724-F15564D5162B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{9A0604FA-99AD-4EA6-9724-F15564D5162B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodChaining", "MethodChaining\MethodChaining.csproj", "{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{9A0604FA-99AD-4EA6-9724-F15564D5162B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A0604FA-99AD-4EA6-9724-F15564D5162B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A0604FA-99AD-4EA6-9724-F15564D5162B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
