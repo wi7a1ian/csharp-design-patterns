@@ -69,9 +69,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Comp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{9A0604FA-99AD-4EA6-9724-F15564D5162B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodChaining", "MethodChaining\MethodChaining.csproj", "{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodChaining", "MethodChaining\MethodChaining.csproj", "{C971DBF9-C2DE-4C91-AC6E-658C1062BA15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullObject", "NullObject\NullObject.csproj", "{AB5C3CC7-41B5-47E4-B3D6-2E76B094D5EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NullObject", "NullObject\NullObject.csproj", "{AB5C3CC7-41B5-47E4-B3D6-2E76B094D5EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{983507C1-E4A2-45F1-BA17-731585B16F53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,6 +221,10 @@ Global
 		{AB5C3CC7-41B5-47E4-B3D6-2E76B094D5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB5C3CC7-41B5-47E4-B3D6-2E76B094D5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB5C3CC7-41B5-47E4-B3D6-2E76B094D5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{983507C1-E4A2-45F1-BA17-731585B16F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983507C1-E4A2-45F1-BA17-731585B16F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983507C1-E4A2-45F1-BA17-731585B16F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983507C1-E4A2-45F1-BA17-731585B16F53}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
